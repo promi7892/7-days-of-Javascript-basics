@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&display=swap');
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	background: #222;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+.calculate,
+.result {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: start;
+}
+.result {
+	display: none;
+}
+
+.calculate .title,
+.result .title {
+	font-size: 3rem;
+	font-weight: bold;
+	/* color: #fff; */
+	background: -webkit-linear-gradient(45deg, #cc0303, #f59240);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.calculate .gender {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 75%;
+}
+
+.calculate .gender div {
+	height: 32vmin;
+	width: 32vmin;
+	background: #232323;
+	box-shadow: 0 0.5vmin 1vmin 0.6vmin #292929;
+	font-size: 20vmin;
+	font-weight: bold;
+	text-align: center;
+	line-height: 32vmin;
+	color: #ccc;
+	margin-top: 2rem;
+	cursor: pointer;
+}
+
+.calculate .gender div span {
+	background: #fff;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.calculate .gender .male.active span {
+	background: -webkit-linear-gradient(45deg, #8e2de2, #4a00e0);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.calculate .gender .female.active span {
+	background: -webkit-linear-gradient(45deg, #f377ce, #b90367);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.calculate .height,
+.calculate .weight {
+	margin-top: 4vmin;
+	height: 32vmin;
+	width: 75%;
+	background: #232323;
+	box-shadow: 0 0.5vmin 1vmin 0.6vmin #292929;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	font-size: 5vmin;
+	font-weight: bold;
+	color: #555;
+}
+.calculate .height .val,
+.calculate .weight .val {
+	color: #fff;
+	font-size: 5vmin;
+	margin-top: 1rem;
+}
+.calculate .height .val i,
+.calculate .weight .val i {
+	text-align: center;
+	line-height: 6vmin;
+	font-size: 5vmin;
+	font-weight: bold;
+	padding: 3vmin;
+}
+
+.calculate .height .val span,
+.calculate .weight .val span {
+	font-size: 6vmin;
+	font-weight: bold;
+}
+
+.calculate .height input,
+.calculate .weight input {
+	-webkit-appearance: none;
+	width: 90%;
+	height: 3vmin;
+	background: #333;
+	border-radius: 50vmin;
+	overflow: hidden;
+}
+
+.calculate .height input::-webkit-slider-thumb,
+.calculate .weight input::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	height: 3vmin;
+	width: 3vmin;
+	background: linear-gradient(45deg, #ff7400, #f4511e);
+	box-shadow: -50vmin 0 0 50vmin #f4511e;
+}
+
+.calculate .calc,
+.result .recalc {
+	height: 14vmin;
+	width: 75%;
+	line-height: 14vmin;
+	margin: 6vmin;
+	color: #fff;
+	font-size: 5vmin;
+	font-weight: bold;
+	background: #232323;
+	text-align: center;
+	box-shadow: 0 0.5vmin 1vmin 0.6vmin #292929;
+}
+
+.calculate .calc:hover,
+.result .recalc:hover {
+	color: #f4511e;
+}
+
+.result .recalc {
+	margin-top: 20vmin;
+}
+
+.result .bmi {
+	height: 40vmin;
+	width: 75%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: #232323;
+	box-shadow: 0 0.5vmin 1vmin 0.6vmin #292929;
+	margin-top: 5vmin;
+}
+
+.result .bmi .title {
+	color: #555;
+	font-size: 6.5vmin;
+	font-weight: bold;
+}
+
+.result .bmi .val {
+	font-size: 7vmin;
+	font-weight: bold;
+}
+
+.result .text {
+	font-size: 5vmin;
+	font-weight: bold;
+	color: #fff;
+	width: 75%;
+	text-align: center;
+	margin-top: 20vmin;
+}
